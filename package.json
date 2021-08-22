@@ -4,7 +4,12 @@
   "description": "<<<<<<< HEAD",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "npx webpack -w --config webpack.config.js --mode development && postcss css/styles.css -o dist/styles.css"
+    "start-dev": "concurrently \"npm run dev\" \"npm run css-dev\"",
+    "start-prod": "concurrently \"npm run prod\" \"npm run css-prod\"",
+    "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o dist/styles.css -w --verbose",
+    "css-prod": "NODE_ENV=production postcss css/styles.css -o dist/styles.css",
+    "dev": "npx webpack -w --config webpack.config.js --mode development",
+    "prod": "npx webpack -w --config webpack.config.js --env production"
   },
   "repository": {
     "type": "git",
@@ -19,7 +24,11 @@
   "homepage": "https://github.com/nikoescobal/js-template#readme",
   "dependencies": {
     "autoprefixer": "^10.3.2",
+    "concurrently": "^6.2.1",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.8"
   }
 }
