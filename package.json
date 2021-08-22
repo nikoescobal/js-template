@@ -4,7 +4,7 @@
   "description": "<<<<<<< HEAD",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "postcss css/styles.css -o dist/styles.css"
+    "build": "npx webpack -w --config webpack.config.js --mode development && postcss css/styles.css -o dist/styles.css"
   },
   "repository": {
     "type": "git",
