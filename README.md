@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # Project X (building a X to do Y)
 
 In this project, I built a small Library app to show and add books to a library.
@@ -62,4 +59,3 @@ Give a ⭐️ if you like this project!
 ## 📝 MIT License
 
 This project makes use of the MIT license.
->>>>>>> d988f320416a9f46a9f568ee718b804611db4821
