@@ -1,7 +1,7 @@
 {
   "name": "js-template",
   "version": "1.0.0",
-  "description": "<<<<<<< HEAD",
+  "description": "Simple template of JS with Tailwind",
   "main": "webpack.config.js",
   "scripts": {
     "start-dev": "concurrently \"npm run dev\" \"npm run css-dev\"",
