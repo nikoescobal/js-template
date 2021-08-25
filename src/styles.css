@@ -570,13 +570,9 @@ video {
 .justify-center {
 	justify-content: center;
 }
-.bg-purple-500 {
+.bg-green-300 {
 	--tw-bg-opacity: 1;
-	background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
-}
-.bg-pink-300 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(249, 168, 212, var(--tw-bg-opacity));
+	background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
 }
 .p-24 {
 	padding: 6rem;

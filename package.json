@@ -6,8 +6,8 @@
   "scripts": {
     "start-dev": "concurrently \"npm run dev\" \"npm run css-dev\"",
     "start-prod": "concurrently \"npm run prod\" \"npm run css-prod\"",
-    "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o dist/styles.css -w --verbose",
-    "css-prod": "NODE_ENV=production postcss css/styles.css -o dist/styles.css",
+    "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o src/styles.css -w --verbose",
+    "css-prod": "NODE_ENV=production postcss css/styles.css -o src/styles.css",
     "dev": "npx webpack -w --config webpack.config.js --mode development",
     "prod": "npx webpack -w --config webpack.config.js --env production"
   },
@@ -26,6 +26,7 @@
     "autoprefixer": "^10.3.2",
     "concurrently": "^6.2.1",
     "postcss-cli": "^8.3.1",
+    "tailwind": "^4.0.0",
     "tailwindcss": "^2.2.7"
   },
   "devDependencies": {
