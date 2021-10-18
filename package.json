@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest --coverage",
-    "start-dev": "concurrently \"npm run dev\" \"npm run css-dev\"",
+    "start": "concurrently \"npm run dev\" \"npm run css-dev\"",
     "start-prod": "concurrently \"npm run prod\" \"npm run css-prod\"",
     "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o src/styles.css -w --verbose",
     "css-prod": "NODE_ENV=production postcss css/styles.css -o src/styles.css",
