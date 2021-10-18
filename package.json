@@ -7,8 +7,8 @@
     "test": "jest --coverage",
     "start": "concurrently \"npm run dev\" \"npm run css-dev\"",
     "start-prod": "concurrently \"npm run prod\" \"npm run css-prod\"",
-    "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o src/styles.css -w --verbose",
-    "css-prod": "NODE_ENV=production postcss css/styles.css -o src/styles.css",
+    "css-dev": "TAILWIND_MODE=watch postcss src/styles.css -o dist/styles.css -w --verbose",
+    "css-prod": "NODE_ENV=production postcss src/styles.css -o dist/styles.css",
     "dev": "npx webpack -w --config webpack.config.js --mode development",
     "prod": "npx webpack -w --config webpack.config.js --env production",
     "deploy": "gh-pages -d dist",
@@ -33,10 +33,20 @@
     "tailwind": "^4.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "babel-eslint": "^10.1.0",
     "cssnano": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "hint": "^6.1.4",
     "html-webpack-plugin": "^5.3.2",
     "jest": "^27.2.4",
     "lodash": "^4.17.21",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
     "tailwindcss": "^2.2.16"
   }
 }
