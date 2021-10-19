@@ -14,14 +14,9 @@
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
-<<<<<<< HEAD
     "import/extensions": [1, {
       "js": "always",
       "json": "always"
-=======
-    "import/extensions": [ 1, {
-      "js": "always", "json": "always"
->>>>>>> 07ed09b029e1288c1d40eb23119890dacae9f071
     }]
   },
   "ignorePatterns": [

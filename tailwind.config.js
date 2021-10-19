@@ -1,15 +1,20 @@
-console.log(process.env.NODE_ENV);
 module.exports = {
   mode: 'jit',
   purge: [
-    './dist/**/*.html'
+    './dist/**/*.html',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ['"Nunito"', 'sans-serif'],
+        italianno: ['"Italianno"', 'cursive'],
+        raleway: ['"Raleway"', 'sans-serif'],
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
