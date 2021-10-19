@@ -12,11 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-<<<<<<< HEAD
       title: 'js-template',
-=======
-      title: 'API-based-app',
->>>>>>> bc697c83a4c7502049155e05426206d563907b36
       template: './src/index.html',
     }),
   ],
