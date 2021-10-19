@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "cssnano": "^5.0.8",
-    "html-webpack-plugin": "^5.3.2",
     "jest": "^27.2.4",
     "lodash": "^4.17.21",
     "tailwindcss": "^2.2.16"
