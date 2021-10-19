@@ -1,6 +1,3 @@
-/* eslint-disable */
-/* stylelint-disable */
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -10,12 +7,6 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'js-template',
-      template: './src/index.html',
-    }),
-  ],
   module: {
     rules: [{
         test: /\.css$/,

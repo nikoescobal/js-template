@@ -5,12 +5,12 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "concurrently \"npm run build\" \"npm run css-dev\"",
-    "build": "npx webpack -w --config webpack.config.js --mode development",
-    "css-dev": "TAILWIND_MODE=watch postcss src/styles.css -o dist/styles.css -w --verbose",
-    "css-prod": "NODE_ENV=production postcss src/styles.css -o dist/styles.css",
-    "prod": "npx webpack -w --config webpack.config.js --env production",
+    "start-dev": "concurrently \"npm run dev\" \"npm run css-dev\"",
     "start-prod": "concurrently \"npm run prod\" \"npm run css-prod\"",
+    "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o src/styles.css -w --verbose",
+    "css-prod": "NODE_ENV=production postcss css/styles.css -o src/styles.css",
+    "dev": "npx webpack -w --config webpack.config.js --mode development",
+    "prod": "npx webpack -w --config webpack.config.js --env production",
     "deploy": "gh-pages -d dist",
     "lint": "npx eslint . && npx stylelint **/*.{css,scss} && npx hint ."
   },
@@ -33,17 +33,9 @@
     "tailwind": "^4.0.0"
   },
   "devDependencies": {
-    "babel-loader": "^8.2.2",
-    "css-loader": "^6.4.0",
     "cssnano": "^5.0.8",
-    "html-webpack-plugin": "^5.4.0",
     "jest": "^27.2.4",
-    "json-loader": "^0.5.7",
     "lodash": "^4.17.21",
-    "style-loader": "^3.3.0",
-    "tailwindcss": "^2.2.16",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.58.2",
-    "webpack-cli": "^4.9.1"
+    "tailwindcss": "^2.2.16"
   }
 }
